@@ -1,0 +1,177 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Цены
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="px-4 py-5 my-5 text-center">
+        <!-- <h1 class="display-5 fw-bold text-body-emphasis tv">Ремонт телевизоров</h1> -->
+        <h1 id="remont-televizorov" class="display-5 fw-bold text-body-emphasis">Ремонт телевизоров</h1>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4 mt-5">Ваш телевизор не включается? Нет изображения, но звук есть? Экран потемнел, мигает
+                или
+                показывает полосы? Не спешите выкидывать технику — в 90% случаев ремонт телевизора обходится в разы
+                дешевле покупки нового устройства. Ниже предоставленны цены на ремонт. </p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"> </div>
+        </div>
+    </div>
+    <div class="px-4 py-5 my-5 text-center">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Неисправность</th>
+                    <th scope="col">Работа</th>
+                    <th scope="col">Диагональ</th>
+                    <th scope="col">Цена</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-center align-middle">Любая неисправность</td>
+                    <td class="text-center align-middle">Диагностика</td>
+                    <td>32-65</td>
+                    <td>1000</td>
+
+                </tr>
+                <tr>
+                    <td class="text-center align-middle">Нет изображения, звук есть</td>
+                    <td class="text-center align-middle">Замена подсветки</td>
+                    <td>32-40<br>40-50<br>50-65<br>65-85</td>
+                    <td>3000<br>4000<br>5500<br>8000</td>
+
+                </tr>
+                <tr>
+                    <td>Не включается, нет индикации, писк</td>
+                    <td>Ремонт / Замена блока питания</td>
+                    <td>32-85</td>
+                    <td>3400</td>
+                </tr>
+                <tr>
+                    <td>Зависает, отключается, долго включается</td>
+                    <td>Ремонт / Замена платы main board</td>
+                    <td>32-85</td>
+                    <td>3500</td>
+                </tr>
+                <tr>
+                    <td>Нет изображения, но есть подсветка<br>Полосы<br>Залит водой</td>
+                    <td class="text-center align-middle">Ремонт матрицы телевизора</td>
+                    <td>32-40<br>40-50<br>50-65<br>65-85</td>
+                    <td>3500<br>4500<br>6000<br>8500</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="px-4 py-5 my-5 text-center">
+        <h2 id="remont-kofemashin" class="display-5 fw-bold text-body-emphasis">Ремонт кофемашин</h2>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4 mt-5">Ваша кофемашина перестала варить кофе? Не греет воду? Капает, шумит, выдаёт ошибку
+                или
+                просто не включается? Не спешите покупать новую — ремонт часто обходится во много раз дешевле, особенно
+                если техника из среднего или премиум-сегмента.</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"> </div>
+        </div>
+    </div>
+    <div class="px-4 py-5 my-5 text-center">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Неисправность</th>
+                    <!-- <th scope="col">Диагональ</th> -->
+                    <th scope="col">Работа</th>
+                    <th scope="col">Цена</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Любая неисправность</td>
+                    <td>Диагностика</td>
+                    <td>1000</td>
+                </tr>
+                <tr>
+                    <td>Ошибка чистки, недолив кофе, горчит</td>
+                    <td>Чистка / Дкальцинация</td>
+                    <td>3000</td>
+
+                </tr>
+                <tr>
+                    <td>Скрип при приготовлении, льет кофе в поддон</td>
+                    <td>Чистка / ТО заварочного узла</td>
+                    <td>3000</td>
+                </tr>
+                <tr>
+                    <td>Течет под себя</td>
+                    <td>Восстановление гидросистемы</td>
+                    <td>1500</td>
+                </tr>
+                <tr>
+                    <td>Не делает капучино</td>
+                    <td>Восстановление паровой системы</td>
+                    <td>1500</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="px-4 py-5 my-5 text-center">
+        <h2 id="remont-laptop" class="display-5 fw-bold text-body-emphasis">Ремонт ноутбуков</h2>
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4 mt-5">Ваш ноутбук не включается? Виснет, греется, шумит вентилятор, не держит заряд или
+                не видит Wi-Fi? Не спешите нести его в первый попавшийся сервис с рекламой «Бесплатная диагностика!»,
+                «Гарантия 5 лет!», «Ремонт за 500₽!» — в 8 из 10 случаев это схема, которая в итоге обойдётся вам в в
+                несколько раз дороже. Я вам гарантирую честную цену.</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"> </div>
+        </div>
+    </div>
+    <div class="px-4 py-5 my-5 text-center">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Неисправность</th>
+                    <th scope="col">Работа</th>
+                    <th scope="col">Цена</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row">Любая неисправность</td>
+                    <td>Диагностика</td>
+                    <td>1000</td>
+
+                </tr>
+                <tr>
+                    <td scope="row">Апгрейд ноутбука\ПК</td>
+                    <td>Подбор\Замена комплетующих</td>
+                    <td>3500</td>
+
+                </tr>
+                <tr>
+                    <td scope="row">Разбита матрица\Полосы</td>
+                    <td>Замена матрицы</td>
+                    <td>2500</td>
+
+                </tr>
+                <tr>
+                    <td scope="row">Не работает клавиатура</td>
+                    <td>Замена клавиатуры</td>
+                    <td>2800</td>
+
+                </tr>
+                <tr>
+                    <td scope="row">Разбит корпус</td>
+                    <td>Замена корпусных деталей</td>
+                    <td>1500</td>
+                </tr>
+                <tr>
+                    <td scope="row">Не включается, не заряжается</td>
+                    <td>Ремот матплаты</td>
+                    <td>3500</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

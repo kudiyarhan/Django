@@ -1,0 +1,198 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+Главная
+{% endblock %}
+
+{% block body %}
+<div class="px-4 py-5 my-5 text-center">
+  <h1 class="display-5 fw-bold text-body-emphasis mb-4">Мастер по ремонту техники в Краснодаре</h1>
+  <div class="col-lg-8 mx-auto">
+    <p class="lead mb-4">В наше время техника окружает нас повсюду, создает удобства, экономит время, помогает в
+      творчестве и работе. В каждом доме есть большое количество электронных приборов,
+      да что говорить — в каждом кармане лежит целый компьютер. Но все электронные приборы рано или поздно выходят из
+      строя, происходит это по разным причинам: будь то падение, попадание влаги, удары
+      молнии или заводской брак. Любая поломка неприятна и требует трат денег, энергии и самое главное — времени. К
+      сожалению, мы живем в то время, когда обман клиентов в сервисных центрах и мастерских
+      стало обыденным делом. Наиболее распространенная схема обмана — это накручивание работ и замена несуществующих
+      запчастей со сложными названиями. Поэтому люди начинают искать частных мастеров
+      по ремонту техники, но тут тоже можно столкнуться с обманом и безалаберностью. Со своей стороны могу гарантировать,
+      что завышения цен или пропажи техники не будет. Все работы выполняются по
+      прайсу и в реальные сроки. Я не обещаю бесплатных курьеров и бесплатных диагностик, потому что все бесплатное можно
+      встретить только в мышеловке.
+    </p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center"> </div>
+  </div>
+</div>
+
+<!-- техника -->
+<div class="container px-4 py-5" id="custom-cards">
+  <h2 class="pb-2 border-bottom">Ремонт техники в Краснодаре</h2>
+  <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+    
+    <!-- Телевизоры -->
+    <div class="col">
+      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" 
+           style="background-image: url('{% static 'main/img/tv.jpg' %}');
+                  background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 400px;">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+          <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Ремонт телевизоров</h3>
+          <ul class="d-flex list-unstyled mt-auto">
+            <li class="d-flex align-items-center me-3">
+              <a href="#" class="text-decoration-none text-white"><small>Узнать цену</small></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Кофемашины -->
+    <div class="col">
+      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+           style="background-image: url('{% static 'main/img/cofee.jpg' %}');
+                  background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 400px;">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+          <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Ремонт кофемашин</h3>
+          <ul class="d-flex list-unstyled mt-auto">
+            <li class="d-flex align-items-center me-3">
+              <a href="#" class="text-decoration-none text-white"><small>Узнать цену</small></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3D принтеры -->
+    <div class="col">
+      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+           style="background-image: url('{% static 'main/img/3d.jpg' %}');
+                  background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 400px;">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+          <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Ремонт 3D принтеров</h3>
+          <ul class="d-flex list-unstyled mt-auto">
+            <li class="d-flex align-items-center me-3"><small>Узнать цену</small></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ноутбуки -->
+    <div class="col">
+      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+           style="background-image: url('{% static 'main/img/laptop.jpg' %}');
+                  background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 400px;">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+          <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Ремонт ноутбуков</h3>
+          <ul class="d-flex list-unstyled mt-auto">
+            <li class="d-flex align-items-center me-3">
+              <a href="#" class="text-decoration-none text-white"><small>Узнать цену</small></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Роботы-пылесосы -->
+    <div class="col">
+      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+           style="background-image: url('{% static 'main/img/robot.jpg' %}');
+                  background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 400px;">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+          <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Ремонт роботов-пылесосов</h3>
+          <ul class="d-flex list-unstyled mt-auto">
+            <li class="d-flex align-items-center me-3"><small>Узнать цену</small></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Мобильные телефоны -->
+    <div class="col">
+      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+           style="background-image: url('{% static 'main/img/mobile.jpg' %}');
+                  background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 400px;">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+          <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Ремонт мобильных телефонов</h3>
+          <ul class="d-flex list-unstyled mt-auto">
+            <li class="d-flex align-items-center me-3"><small>Узнать цену</small></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- фичи -->
+<div class="container px-4 py-5" id="icon-grid">
+  <h2 class="pb-2 border-bottom">Почему стоит обратиться ко мне</h2>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+
+    <div class="col d-flex align-items-start">
+      <i class="bi bi-bootstrap fs-4 text-body-secondary me-3"></i>
+      <div>
+        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Опыт работы</h3>
+        <p>Опыт работы с 2011 года</p>
+      </div>
+    </div>
+
+    <div class="col d-flex align-items-start">
+      <i class="bi bi-cpu-fill fs-4 text-body-secondary me-3"></i>
+      <div>
+        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Честная цена</h3>
+        <p>Нет выдуманных неисправностей для поднятия цены</p>
+      </div>
+    </div>
+
+    <div class="col d-flex align-items-start">
+      <i class="bi bi-calendar3 fs-4 text-body-secondary me-3"></i>
+      <div>
+        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Короткие сроки</h3>
+        <p>Устранение неисправностей в короткие сроки</p>
+      </div>
+    </div>
+
+    <div class="col d-flex align-items-start">
+      <i class="bi bi-house fs-4 text-body-secondary me-3"></i>
+      <div>
+        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Нет посредников</h3>
+        <p>Работаю на себя, нет цепочки из лишних людей</p>
+      </div>
+    </div>
+
+    <div class="col d-flex align-items-start">
+      <i class="bi bi-speedometer2 fs-4 text-body-secondary me-3"></i>
+      <div>
+        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Четкий прайс</h3>
+        <p>Привязка к прайсу, где описаны наиболее частые неисправности и цена их устранения</p>
+      </div>
+    </div>
+
+    <div class="col d-flex align-items-start">
+      <i class="bi bi-toggles fs-4 text-body-secondary me-3"></i>
+      <div>
+        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Полная отчетность</h3>
+        <p>Веду свой блог, в котором можно увидеть все проделанные работы</p>
+      </div>
+    </div>
+
+    <div class="col d-flex align-items-start">
+      <i class="bi bi-geo-fill fs-4 text-body-secondary me-3"></i>
+      <div>
+        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Отсутствие менеджеров</h3>
+        <p>Общение происходит исключительно со мной</p>
+      </div>
+    </div>
+
+    <div class="col d-flex align-items-start">
+      <i class="bi bi-tools fs-4 text-body-secondary me-3"></i>
+      <div>
+        <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Выбор запчастей</h3>
+        <p>Большой выбор запчастей: как оригинальных, так и аналогов. Работаю с вашими запчастями</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock %}
