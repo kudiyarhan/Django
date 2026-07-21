@@ -13,7 +13,7 @@
 <div class="container">
   <div class="px-4 py-5 my-5 text-center">
     <h1 class="display-5 fw-bold text-body-emphasis mb-5">{{ article.title }}</h1>
-    <div class="col-lg-8 mx-auto">
+    <div class="col-lg-12 mx-auto">
       <p class="lead mb-4">{{ article.text }}</p>
     </div>
   </div>
@@ -29,9 +29,9 @@
     <div class="col-lg-4 col-md-6">
       <figure class="figure w-100">
         <img src="{{ article.image.url }}"
-             class="figure-img img-fluid rounded shadow w-100"
+             class="figure-img img-fluid rounded shadow w-100 gallery-img"
              alt="{{ article.title }}"
-             style="height: 250px; object-fit: cover;">
+             style="aspect-ratio: 1 / 1; object-fit: cover; cursor: pointer;">
       </figure>
     </div>
     {% endif %}
@@ -41,9 +41,9 @@
     <div class="col-lg-4 col-md-6">
       <figure class="figure w-100">
         <img src="{{ img.image.url }}"
-             class="figure-img img-fluid rounded shadow w-100"
+             class="figure-img img-fluid rounded shadow w-100 gallery-img"
              alt="{{ article.title }} - {{ forloop.counter }}"
-             style="height: 250px; object-fit: cover;">
+             style="aspect-ratio: 1 / 1; object-fit: cover; cursor: pointer;">
         {% if img.caption %}
         <figcaption class="figure-caption text-center">{{ img.caption }}</figcaption>
         {% endif %}
@@ -64,6 +64,22 @@
     </div>
   </div>
 </div>
+
+<!-- Lightbox -->
+<div id="lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.9); z-index:9999; justify-content:center; align-items:center; cursor:pointer;" onclick="this.style.display='none'">
+  <img id="lightbox-img" src="" style="max-width:95%; max-height:95%; object-fit:contain; border-radius:8px;">
+</div>
+
+<script>
+  document.querySelectorAll('.gallery-img').forEach(function(img) {
+    img.addEventListener('click', function() {
+      var lightbox = document.getElementById('lightbox');
+      var lightboxImg = document.getElementById('lightbox-img');
+      lightboxImg.src = this.src;
+      lightbox.style.display = 'flex';
+    });
+  });
+</script>
 
 {% endblock %}
 
