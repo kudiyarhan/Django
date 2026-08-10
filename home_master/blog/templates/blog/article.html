@@ -1,20 +1,31 @@
 {% extends 'main/base.html' %}
 {% load static %}
+{% load markdown_extras %}
 
 {% block title %}{{ article.title }} — home-master.space{% endblock %}
 
-{% block meta_description %}{{ article.text|truncatechars:160 }}{% endblock %}
+{% block meta_description %}{{ article.short_description|default:article.title }}{% endblock %}
 
 {% block meta_keywords %}ремонт техники, {{ article.title }}, Краснодар{% endblock %}
 
 {% block og_image %}{{ article.image.url }}{% endblock %}
 
 {% block body %}
+
+<!-- Заголовок статьи (по центру) -->
 <div class="container">
-  <div class="px-4 py-5 my-5 text-center">
-    <h1 class="display-5 fw-bold text-body-emphasis mb-5">{{ article.title }}</h1>
-    <div class="col-lg-12 mx-auto">
-      <p class="lead mb-4">{{ article.text }}</p>
+  <div class="px-4 py-5 my-4 text-center">
+    <h1 class="display-5 fw-bold text-body-emphasis mb-3">{{ article.title }}</h1>
+  </div>
+</div>
+
+<!-- Основной текст статьи (на всю ширину) -->
+<div class="container mb-5">
+  <div class="row">
+    <div class="col-12">
+      <div class="markdown-body">
+        {{ article.text|markdown }}
+      </div>
     </div>
   </div>
 </div>
@@ -90,7 +101,7 @@
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "{{ article.title }}",
-  "description": "{{ article.text|truncatechars:200 }}",
+  "description": "{{ article.short_description|default:article.title }}",
   "datePublished": "{{ article.created_at|date:'Y-m-d' }}",
   "author": {
     "@type": "Person",
